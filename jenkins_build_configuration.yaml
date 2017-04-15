@@ -1,0 +1,9 @@
+- hosts: local
+  sudo: true
+
+  tasks:
+    - ini_file:
+        path: /usr/share/dash-stack/dash_stack_dashboard/dash_stack_dashboard/settings.py
+        option: SITE_ROOT_URL
+        value: http://demo.dash-stack.com
+        backup: no
