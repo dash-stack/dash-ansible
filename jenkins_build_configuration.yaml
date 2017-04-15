@@ -2,8 +2,7 @@
   sudo: true
 
   tasks:
-    - ini_file:
+    - lineinfile:
         path: /usr/share/dash-stack/dash_stack_dashboard/dash_stack_dashboard/settings.py
-        option: SITE_ROOT_URL
-        value: http://demo.dash-stack.com
-        backup: no
+        regexp: '^SITE_ROOT_URL'
+        line: 'SITE_ROOT_URL = "http://demo.dash-stack.com"'
