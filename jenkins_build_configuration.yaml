@@ -3,6 +3,15 @@
 
   tasks:
     - lineinfile:
-        path: /usr/share/dash-stack/dash_stack_dashboard/dash_stack_dashboard/settings.py
+        path: /usr/share/palamar/palamar/palamar/settings.py
         regexp: '^SITE_ROOT_URL'
         line: 'SITE_ROOT_URL = "http://demo.dash-stack.com"'
+
+    - lineinfile:
+        path: /usr/share/palamar/palamar/palamar/settings.py
+        regexp: '^STATICFILES_DIRS'
+        state: absent
+
+    - lineinfile:
+        path: /usr/share/palamar/palamar/palamar/settings.py
+        line: 'STATIC_ROOT = "static"'
