@@ -16,7 +16,7 @@
         path: /usr/share/palamar/palamar/palamar/settings.py
         line: 'STATIC_ROOT = "static"'
 
-    template:
+    - template:
         src: /usr/share/palamar/palamar/conf/local_settings.py.template
         dest: /usr/share/palamar/palamar/palamar/local_settings.py
         owner: jenkins
